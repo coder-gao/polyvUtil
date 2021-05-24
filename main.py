@@ -70,6 +70,21 @@ def main():
                 f.write(ts)
             os.system('node v1102 ' + detoken + ' ' + enc_key.hex() + ' ' + iv + ' ' + seedconst + ' "' + downloadpath + tsname + '"')
 
+    logging.info('下载完成，开始合并')
+    for index in range(len(m3u8_obj.data['segments'])):
+        tsname = str(index).zfill(5) + '.ts'
+        with open(downloadpath + tsname, 'rb') as f:
+            ts = f.read()
+        with open(downloadpath + 'out.ts', 'ab') as f:
+            f.write(ts)
+
+    logging.info('合并完成，开始转码')
+    os.system('ffmpeg -i "' + downloadpath + 'out.ts" -c copy "./' + title + '.mp4"')
+
+    logging.info('转码完成，开始删除缓存')
+    shutil.rmtree(downloadpath)
+
+    logging.info('缓存删除完成，下载结束')
 
 if __name__ == '__main__':
     main()
