@@ -1,6 +1,9 @@
 # polyvUtil
 Node.js与python的合作开发
 
+## 前提
+你需要安装python与node.js。并将其配置到环境变量
+
 ## 首先安装依赖库
 > pip install requirements.txt
 >
