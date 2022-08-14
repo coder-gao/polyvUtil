@@ -11,7 +11,7 @@
 
     3.需要可以播放视频的浏览器，建议使用谷歌浏览器
     
-    4.需要安卓Fiddler抓包工具，可以从下方爱盘下载
+    4.需要安装Fiddler抓包工具，可以从下方爱盘下载
     https://down.52pojie.cn/Tools/Network_Analyzer/Fiddler.7z
     
 
@@ -28,4 +28,7 @@
     3.双击运行本项目的【polyvserver.exe】，出现【Starting http server listen at 127.0.0.1:7809】，说明软件启动成功
 ![image](img/3.jpg)
 
-    4.所有初始工作已经做完，这是可以随意打开浏览器播放视频，会自动捕获视频并进行下载
+    4.所有初始工作已经做完，这时可以随意打开浏览器播放视频，会自动捕获视频并进行下载
+    
+## 系统简介
+
